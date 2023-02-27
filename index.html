@@ -1,29 +1,183 @@
 <!DOCTYPE html>
-<html lang="en-ca">
+<html lang="en">
   <head>
-    <!-- Set the page title -->
-    <title>Assignment 02</title>
-
-    <!-- Set the charset we're using to UTF-8 -->
-    <meta charset="UTF-8" />
-
-    <!-- Set the screens default zoom / scale to 1 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <!-- Specifies the document mode for Internet Explorer -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- We are using a CSS Reset file to standardize browser default css -->
-    <link rel="stylesheet" href="reset.css" />
-
-    <!-- This is where all of our awesome CSS code goes -->
+    <title>Benjamin Scott Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="avatar.png">
   </head>
   <body>
-    <!--
+    <!--The top part of the header-->
+    <!--I used hero class names but its really part of the header-->
+    <!--This section of the header could also count as a hero section-->
+    <section class="hero">
+      <div class="herocontainer">
+        <div class="heroimage">
+          <img src="avatar.png" alt="Logo">
+        </div>
+        <div class="herotext">
+          <h1>Benjamin Scott</h1>
+          <p>Concept Artist</p>
+          <p>Contact, Canada</p>
+          <p>Contact me:</p>
+          <a href="/page"><p>bscott1@outlook.com</a> | 613-444-8910</p>
+          <a href="/page"><p>linkedin.com/thebenjaminscott</a></p>
+        </div>
+      </div>
+    </section>
+    
 
-      YOU HAVE TO MODIFY THE HTML TO BUILD YOUR AWESOME PAGE
+    <!--Header, there is a rightline class on the first 3 div boxes, adds a gray divider line-->
+    <section class="header" id="header">
+      <a href="#Portfolio"><div class="rightline"><p>Portfolio</p></div></a>
+      <a href="#About"><div class="rightline"><p>About</p></div></a>
+      <a href="#Contact"><div class="rightline"><p>Contact</p></div></a>
+      <a href="/page"><div><p>Resume</p></div></a>
+    </section>
 
-    -->
+
+
+    <script>
+      // Reference code taken from:
+      // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sticky_header
+
+      window.onscroll = function() {scroll()};
+      //Everytime the user scrolls, the function called scroll will be called
+
+      var header = document.getElementById("header");
+      var headerY = header.offsetTop;
+      //The header is declared so it can be modified
+      //The Y coordinate of the header is put into a variable
+
+
+      function scroll(){
+        if (window.pageYOffset > headerY){
+          header.classList.add("headersticky");
+        } else {
+          header.classList.remove("headersticky");
+        }
+        // If the scrolling reaches the top of the header, the header gets a class of headersticky,
+        // which makes it stay at the top
+      }
+    </script>
+
+    
+    <!--Images in a grid-->
+    <!--I tried using a php for loop for this but I didnt know how to import php into this file/visual studio code-->
+    <section class="images" id="Portfolio">
+      <div><a href="/page"><img class="art" src="pic1.png" alt="Digital art"></a></div>
+      <div><a href="/page"><img class="art" src="pic2.png" alt="Digital art"></a></div>
+      <div><a href="/page"><img class="art" src="pic3.png" alt="Digital art"></a></div>
+      <div><a href="/page"><img class="art" src="pic4.png" alt="Digital art"></a></div>
+      <div><a href="/page"><img class="art" src="pic5.png" alt="Digital art"></a></div>
+
+      <div><a href="/page"><img class="art" src="pic6.png" alt="Digital art"></a></div>
+      <div><a href="/page"><img class="art" src="pic7.png" alt="Digital art"></a></div>
+      <div><a href="/page"><img class="art" src="pic8.png" alt="Digital art"></a></div>
+      <div><a href="/page"><img class="art" src="pic9.png" alt="Digital art"></a></div>
+      <div><a href="/page"><img class="art" src="pic10.png" alt="Digital art"></a></div>
+
+      <div><a href="/page"><img class="art" src="pic11.png" alt="Digital art"></a></div>
+      <div><a href="/page"><img class="art" src="pic12.png" alt="Digital art"></a></div>
+      <div><a href="/page"><img class="art" src="pic13.png" alt="Digital art"></a></div>
+      <div><a href="/page"><img class="art" src="pic14.png" alt="Digital art"></a></div>
+      <div><a href="/page"><img class="art" src="pic15.png" alt="Digital art"></a></div>
+    </section>
+
+
+    <!--About me-->
+    <section id="About" class="section1">
+      <div class="section1picture">
+        <img src="avatar.png" alt="Logo">
+      </div>
+      <div class="section1text">
+        <h2>About Me</h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. Viverra mauris in aliquam sem fringilla ut morbi tincidunt 
+        augue. Leo vel orci porta non pulvinar. Convallis convallis tellus id interdum velit laoreet id donec. 
+        Et leo duis ut diam quam. Turpis tincidunt id aliquet risus feugiat in ante metus. Suspendisse potenti 
+        nullam ac tortor vitae purus faucibus ornare suspendisse. Mi eget mauris pharetra et ultrices neque. 
+        Nisl vel pretium lectus quam id leo in vitae turpis. Ac felis donec et odio pellentesque diam volutpat.
+         Urna nec tincidunt praesent semper feugiat nibh sed. Adipiscing at in tellus integer. Etiam tempor 
+         orci eu lobortis elementum nibh tellus molestie nunc. Sed id semper risus in hendrerit. Mi proin sed 
+         libero enim sed faucibus. Massa tempor nec feugiat nisl pretium fusce id.
+        </p>
+        <a href="/page"><button>Learn More</button></a>
+      </div>
+    </section>
+
+
+    <!--Logos-->
+    <section class="logos">
+      <div><img class="logo1" src="photoshoplogo.png" alt="Adobe Logo"></div>
+      <div><img class="logo2" src="cpslogo.png" alt="Clip Studio Paint Logo"></div>
+      <div><img class="logo3" src="blenderlogo.png" alt="Blender Logo"></div>
+    </section>
+
+
+    <!--Education-->
+    <section class="section2">
+      <div class="section2text">
+        <h2>Education</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua. Viverra mauris in aliquam sem fringilla ut morbi tincidunt 
+          augue. Leo vel orci porta non pulvinar. Convallis convallis tellus id interdum velit laoreet id donec. 
+          Et leo duis ut diam quam. Turpis tincidunt id aliquet risus feugiat in ante metus. Suspendisse potenti 
+          nullam ac tortor vitae purus faucibus ornare suspendisse. Mi eget mauris pharetra et ultrices neque. 
+          Nisl vel pretium lectus quam id leo in vitae turpis. Ac felis donec et odio pellentesque diam volutpat.
+           Urna nec tincidunt praesent semper feugiat nibh sed. Adipiscing at in tellus integer. Etiam tempor 
+           orci eu lobortis elementum nibh tellus molestie nunc. Sed id semper risus in hendrerit. Mi proin sed 
+           libero enim sed faucibus. Massa tempor nec feugiat nisl pretium fusce id.
+        </p>
+        <a href="/page"  id="Contact" ><button>Learn More</button></a>
+      </div>
+      <div class="section2picture">
+        <img src="university.jfif" alt="Logo">
+      </div>
+    </section>
+
+
+    <!--Contact Form-->
+    <section class="contact">
+      <div class="form-outline">
+        <h2>Contact Me</h2>
+        <div class="contactgrid">
+          <div class="contact1">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Phone">
+          </div>
+          <div class="contact2">
+            <input type="text" placeholder="Address">
+            <input type="text" placeholder="Type your message here">
+            <div class="buttoncontainer">
+              <button class="button" type="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--Footer-->
+    <!--I copied the header code from previously-->
+    <footer>
+      <div class="footersection">
+        <div class="footerimage"><img src="avatar.png" alt="Logo"></div>
+        <div><h1>Benjamin Scott</h1></div>
+        <div><p>©Copyright 2023 All Rights Reserved.</p></div>
+      </div>
+      <div class="header" id="header">
+        <a href="#Portfolio"><div class="rightline"><p>Portfolio</p></div></a>
+        <a href="#About"><div class="rightline"><p>About</p></div></a>
+        <a href="#Contact"><div class="rightline"><p>Contact</p></div></a>
+        <a href="/page"><div><p>Resume</p></div></a>
+      </div>
+    </footer>
   </body>
 </html>
